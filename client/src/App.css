@@ -1,11 +1,16 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
 }
+
 
 .App-header {
   background-color: #282c34;
@@ -18,9 +23,18 @@
   color: white;
 }
 
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+
 .App-link {
   color: #61dafb;
 }
+
 
 .navbar {
   position: fixed;
@@ -31,10 +45,21 @@
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  padding: 0 50px;
-  box-sizing: border-box;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  border-top: 1px solid #1a1a1a;
+  padding: 0.375rem;
 }
 
 ul {
@@ -50,20 +75,31 @@ li {
 li a {
   text-decoration: none;
   color: #000;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 li a:hover {
   color: #e74c3c;
 }
 
-img {
-  margin-top: 20px;
-  width: 80px;
+
+.containerImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+
+img {
+  margin-top: 50px;
+  width: 500px;
+  height: 500px;
+  padding: 50px 2px;
+}
+
 
 .slide-in {
   transform: translateX(0);
@@ -75,12 +111,13 @@ img {
   transition: transform 0.3s ease-out;
 }
 
+
 .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 25px;
-  height: 20px;
+  width: 20px;
+  height: 15px;
   cursor: pointer;
 }
 
@@ -104,11 +141,6 @@ img {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 @keyframes App-logo-spin {
   from {
@@ -137,6 +169,7 @@ img {
   }
 }
 
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -144,6 +177,7 @@ img {
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  padding-top: 0rem;
+  width: 120px;
+  height: auto;
 }
