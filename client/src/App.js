@@ -4,6 +4,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import "./App.css";
 import Home from "./pages/Home";
 import Nav from "./components/Nav"
+import Footer from "./components/Footer"
 // import Login from "./pages/Login";
 // import Calendar from "./pages/Calendar";
 // import NotFound from "./pages/NotFound";
@@ -27,6 +28,7 @@ function App() {
             <Route path="/calendar" element={<Calendar />} />
             <Route path="*" element={<NotFound />} /> */}
           </Routes>
+          <Footer/>
         </div>
       </Router>
     </ApolloProvider>
