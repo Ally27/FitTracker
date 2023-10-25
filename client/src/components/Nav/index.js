@@ -38,13 +38,17 @@ function Nav() {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
+              height: "100%"
             }}
           >
             <Link to="/">
               <img src={"FitLogo.png"} alt="FitTracker Logo" className="logo" />
             </Link>
 
-            <div className={`hamburger ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
+            <div
+              className={`hamburger ${isMenuOpen ? "open" : ""}`}
+              onClick={toggleMenu}
+            >
               <span></span>
               <span></span>
               <span></span>
