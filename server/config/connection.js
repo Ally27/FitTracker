@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://desktop-admin:kato@cluster0.0epry.mongodb.net/');
+require('dotenv').config();
+mongoose.connect(process.env.MONGODB_URI ||  'mongodb://localhost/Fit_Tracker_db', );
 
 module.exports = mongoose.connection;

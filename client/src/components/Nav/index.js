@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
+import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
 function Nav() {
@@ -15,18 +16,50 @@ function Nav() {
   const NavigationLinks = () => {
     const links = ["Home", "Calendar", "Profile", "Logout"];
 
-    return (
-      <ul className={`flex-row ${isMenuOpen ? "slide-in" : "slide-out"}`}>
-        {links.map((link, index) => (
-          <li className="mx-1" key={index}>
-            <Link to={link.toLowerCase()} onClick={closeMenu}>
-              {link}
+  function showNavigation() {
+    if (Auth.loggedIn()) {
+      return (
+        <ul className={`flex-row ${isMenuOpen ? "slide-in" : "slide-out"}`}>
+        {/* <ul className={`flex-row `}> */}
+          <li className="mx-1">
+            <Link to="/" onClick={closeMenu}>
+              Home
             </Link>
           </li>
-        ))}
-      </ul>
-    );
-  };
+          <li className="mx-1">
+            <Link to="/" onClick={closeMenu}>
+              Calendar
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/" onClick={closeMenu}>
+              Profile
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/" onClick={() => Auth.logout()}>
+              Logout
+            </Link>
+          </li>
+        </ul>
+      );
+    } else {
+      return (
+        <ul className={`flex-row ${isMenuOpen ? "slide-in" : "slide-out"}`}>
+          <li className="mx-1">
+            <Link to="/signup" onClick={closeMenu}>
+              Signup
+            </Link>
+          </li>
+          <li className="mx-1" onClick={closeMenu}>
+            <Link to="/login">
+              Login
+            </Link>
+          </li>
+        </ul>
+      );
+    } 
+  }
 
   return (
     <div className="container">

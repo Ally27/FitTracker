@@ -111,7 +111,7 @@ img {
 }
 
 
-.slide-in {
+ .slide-in {
   transform: translateX(0);
   transition: transform 0.3s ease-out;
 }
@@ -149,7 +149,7 @@ img {
 
 .hamburger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
-}
+} 
 
 
 @keyframes App-logo-spin {
