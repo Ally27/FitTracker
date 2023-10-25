@@ -5,12 +5,9 @@ import { setContext } from '@apollo/client/link/context';
 import "./App.css";
 import Home from "./pages/Home";
 import Nav from "./components/Nav"
-<<<<<<< HEAD
 import Footer from "./components/Footer"
-=======
 import Login from './pages/Login';
 import Signup from './pages/Signup';
->>>>>>> 35bc5b2338f31d668f76912c46d32c97112c9b18
 // import Login from "./pages/Login";
 // import Calendar from "./pages/Calendar";
 // import NotFound from "./pages/NotFound";
